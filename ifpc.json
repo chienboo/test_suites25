@@ -1,0 +1,22 @@
+{
+  "entries": [
+  ],
+  "rules": [
+    {
+      "ruleName": "cmd",
+      "sources": [
+        "<defect.InfoLeak: java.lang.String source()>"
+      ],
+      "sinks": [
+        "<defect.InfoLeak: void sink(java.lang.String)>"
+      ]
+    }
+  ],
+  "appPath": ".",
+  "useTaintWrapper": true,
+  "verbose": true,
+  "writeOutput": true,
+  "libPaths": [
+    "./ifpc-testcase/jdk/rt.jar"
+  ]
+}
