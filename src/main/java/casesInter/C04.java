@@ -1,12 +1,12 @@
-package inter;
+package casesInter;
 
 import defect.InfoLeak;
 
 public class C04 {
     public static void entry() {
         C04 c04 = new C04();
-        c04.good();
-        c04.bad();
+        // c04.good();
+        // c04.bad();
     }
 
     private String f(int x) {
@@ -32,7 +32,7 @@ public class C04 {
     }
 
     private void bad() {
-        String s = f(5);
+        String s = f(3);
         InfoLeak.sink(s);
     }
 

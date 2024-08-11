@@ -1,15 +1,20 @@
-package inter;
+package casesInter;
 
 import defect.InfoLeak;
 
-public class C03 {
+public class C06 {
     static class C {
         int x;
         String s;
     }
-    public static void entry(int anyInt, boolean anyBool) {
-//        C03 c03 = new C03();
-//        c03.good(anyInt);
+    public static void entry(int anyInt) {
+        C06 c06 = new C06();
+        c06.good(anyInt);
+    }
+
+    private void foo(C c) { 
+        int x = c.x + 3;
+        System.out.println(x);
     }
 
     private void good(int i) {
@@ -19,6 +24,7 @@ public class C03 {
             a.s = InfoLeak.source();
             a.x = i;
         }
+        foo(a);
         reachSink(b);
     }
 
