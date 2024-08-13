@@ -1,4 +1,4 @@
-package casesInter;
+package inter;
 
 import defect.InfoLeak;
 

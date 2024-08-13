@@ -1,7 +1,10 @@
-package casesInter;
+package inter;
 
 import defect.InfoLeak;
 
+/**
+ * use parameter in condition. Context sensitive case?
+ */
 public class C01 {
 
     public static void entry() {

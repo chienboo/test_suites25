@@ -1,7 +1,10 @@
-package casesInter;
+package inter;
 
 import defect.InfoLeak;
 
+/**
+ * todo: redundant to C01?
+ */
 public class C04 {
     public static void entry() {
         C04 c04 = new C04();
