@@ -1,4 +1,4 @@
-package arrays;
+package general.arrays;
 
 import defect.InfoLeak;
 

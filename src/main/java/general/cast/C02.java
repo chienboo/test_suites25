@@ -1,4 +1,4 @@
-package cast;
+package general.cast;
 
 import defect.InfoLeak;
 
