@@ -2,6 +2,9 @@ package fields;
 
 import defect.InfoLeak;
 
+/**
+ * direct field access in if-condition
+ */
 public class C01 {
     public static void entry() {
 //        good();

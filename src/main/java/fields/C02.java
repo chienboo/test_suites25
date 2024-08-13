@@ -2,6 +2,9 @@ package fields;
 
 import defect.InfoLeak;
 
+/**
+ * condition is derived from computation of two fields
+ */
 public class C02 {
     public static void entry() {
 //        good();

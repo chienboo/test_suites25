@@ -2,6 +2,9 @@ package fields;
 
 import defect.InfoLeak;
 
+/**
+ * a field may point-to two heap objects
+ */
 public class C03 {
     public static void entry() {
 //        good();
