@@ -5,7 +5,7 @@ import defect.InfoLeak;
 public class C05 {
     public static void entry() {
         C05 c05 = new C05();
-//        c05.good();
+       c05.good();
     }
 
     private void good() {

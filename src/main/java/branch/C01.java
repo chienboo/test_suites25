@@ -11,6 +11,7 @@ public class C01 {
 
     public static void main(String[] args) {
         C01 c01 = new C01();
+        c01.good();
     }
 
     public void bad1() {
@@ -40,7 +41,7 @@ public class C01 {
     public void good() {
         boolean a = randomBoolean();
         boolean b = randomBoolean();
-        String source = "safe";
+        String source = safe();
         if (a || b) {
             source = source();
         }

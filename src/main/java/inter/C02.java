@@ -7,18 +7,22 @@ public class C02 {
         int x;
         String s;
     }
-    public static void entry(int anyInt, boolean anyBool) {
-        // C02 c02 = new C02();
-        // C a = new C();
-        // C b = new C();
-        // if (anyInt > 0) {
-        //     a.s = InfoLeak.source();
-        //     a.x = 0;
-        // }
-        // b.s = InfoLeak.safe();
-        // b.x = anyInt;
-        // C c = anyInt > 0 ? a : b;
-        // c02.reachSink(c);
+    public static void entry(int anyInt) {
+        C02 c02 = new C02();
+        c02.good(anyInt);
+    }
+    
+    private void good(int i) {
+        C a = new C();
+        C b = new C();
+        if (i > 0) {
+            a.s = InfoLeak.source();
+            a.x = 0;
+        }
+        b.s = InfoLeak.safe();
+        b.x = i;
+        C c = i > 0 ? a : b;
+        reachSink(c);
     }
 
     private void reachSink(C c) {
