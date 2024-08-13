@@ -13,7 +13,7 @@ public class C03 {
             }
         }
     }
-    public static void entry(int anyInt, boolean anyBool) {
+    public static void entry(int anyInt) {
         C03 c03 = new C03();
         c03.good(anyInt);
     }
@@ -22,13 +22,9 @@ public class C03 {
         int x = c.x + 3;
         System.out.println(x);
     }
-    
-    C getC() {
-        return InfoLeak.randomBoolean() ? null : new C();
-    }
 
     private void good(int i) {
-        C a = getC();
+        C a = new C();
         C b = a;
         if (i > 0) {
             a.s = InfoLeak.source();
@@ -37,10 +33,4 @@ public class C03 {
         foo(a);
         b.reachSink();
     }
-
-    // private void reachSink(C c) {
-    //     if (c.x < 0) {
-    //         InfoLeak.sink(c.s);
-    //     }
-    // }
 }

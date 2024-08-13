@@ -8,8 +8,8 @@ import defect.InfoLeak;
 public class C04 {
     public static void entry() {
         C04 c04 = new C04();
-        // c04.good();
-        // c04.bad();
+        c04.good();
+        c04.bad();
     }
 
     private String f(int x) {

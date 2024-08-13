@@ -4,7 +4,7 @@ import defect.InfoLeak;
 
 public class C01 {
     public static void entry() {
-//        good();
+       good();
     }
 
     private static void good() {
