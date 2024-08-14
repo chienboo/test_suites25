@@ -23,4 +23,12 @@ public class C07 {
             sink(source);
         }
     }
+
+    public void bad() {
+        int x = 1;
+        String source = source();
+        if (addOne(x) == 2) {
+            sink(source);
+        }
+    }
 }

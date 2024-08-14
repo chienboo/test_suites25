@@ -5,12 +5,21 @@ import defect.InfoLeak;
 public class C02 {
     public static void entry() {
        good();
+       bad();
     }
 
     private static void good() {
         String s = InfoLeak.source();
         int p = g(3);
         if (p > 15) {
+            InfoLeak.sink(s);
+        }
+    }
+
+    private static void bad() {
+        String s = InfoLeak.source();
+        int p = g(3);
+        if (p < 15) {
             InfoLeak.sink(s);
         }
     }
@@ -25,10 +34,5 @@ public class C02 {
         if (n <= 0)
             return 1;
         return f((n + 1) / 2) * n;
-    }
-
-    public static void main(String[] args) {
-        int p = g(3);
-        System.out.println(p);
     }
 }

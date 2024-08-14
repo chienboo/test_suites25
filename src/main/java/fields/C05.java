@@ -9,6 +9,7 @@ public class C05 {
     public static void main(String[] args) {
         C05 c05 = new C05();
         c05.good();
+        c05.bad();
     }
 
     public void good() {
@@ -17,6 +18,17 @@ public class C05 {
         if (!cond) {
             source = source();
         }
+        A a = new A();
+        a.b = new B(cond);
+        if (a.b.x) {
+            sink(source);
+        }
+    }
+
+    public void bad() {
+        boolean cond = randomBoolean();
+        String source = "safe";
+        source = source();
         A a = new A();
         a.b = new B(cond);
         if (a.b.x) {

@@ -7,7 +7,8 @@ import defect.InfoLeak;
  */
 public class C03 {
     public static void entry() {
-       good();
+        good();
+        bad();
     }
 
     private static void good() {
@@ -19,6 +20,19 @@ public class C03 {
         boolean cond = InfoLeak.randomBoolean();
         A c = cond ? a : b;
         if (c.x > 20) {
+            InfoLeak.sink(s);
+        }
+    }
+    
+    private static void bad() {
+        String s = InfoLeak.source();
+        A a = new A();
+        A b = new A();
+        a.x = 5;
+        b.x = 6;
+        boolean cond = InfoLeak.randomBoolean();
+        A c = cond ? a : b;
+        if (c.x < 20) {
             InfoLeak.sink(s);
         }
     }

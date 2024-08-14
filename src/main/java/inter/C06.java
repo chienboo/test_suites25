@@ -10,6 +10,7 @@ public class C06 {
     public static void entry(int anyInt) {
         C06 c06 = new C06();
         c06.good(anyInt);
+        c06.bad(anyInt);
     }
 
     private void foo(C c) { 
@@ -21,6 +22,17 @@ public class C06 {
         C a = new C();
         C b = a;
         if (i > 0) {
+            a.s = InfoLeak.source();
+            a.x = i;
+        }
+        foo(a);
+        reachSink(b);
+    }
+
+    private void bad(int i) {
+        C a = new C();
+        C b = a;
+        if (i < -2) {
             a.s = InfoLeak.source();
             a.x = i;
         }

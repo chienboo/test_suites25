@@ -10,6 +10,7 @@ public class C04 {
     public static void main(String[] args) {
         C04 c04 = new C04();
         c04.good();
+        c04.bad();
     }
 
     public void good() {
@@ -20,8 +21,20 @@ public class C04 {
         }
     }
 
+    public void bad() {
+        String source = source();
+        turnOn();
+        if (Inner.cond) {
+            sink(source);
+        }
+    }
+
     public void setCond() {
         Inner.cond = false;
+    }
+
+    public void turnOn() {
+        Inner.cond = true;
     }
 
     static class Inner {

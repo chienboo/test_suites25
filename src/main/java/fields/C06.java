@@ -12,10 +12,16 @@ public class C06 {
     public static void main(String[] args) {
         C06 c06 = new C06();
         c06.good();
+        c06.bad();
     }
 
     public void good() {
         this.cond = false;
+        reachSink();
+    }
+    
+    public void bad() {
+        this.cond = true;
         reachSink();
     }
 
