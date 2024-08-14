@@ -12,6 +12,8 @@ public class C01 {
     public static void main(String[] args) {
         C01 c01 = new C01();
         c01.good();
+        c01.bad1();
+        c01.bad2();
     }
 
     public void bad1() {
