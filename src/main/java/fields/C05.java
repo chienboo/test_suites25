@@ -27,8 +27,10 @@ public class C05 {
 
     public void bad() {
         boolean cond = randomBoolean();
-        String source = "safe";
-        source = source();
+        String source = safe();
+        if (cond) {
+            source = source();
+        }
         A a = new A();
         a.b = new B(cond);
         if (a.b.x) {

@@ -10,7 +10,7 @@ public class C01 {
     public static void main(String[] args) {
         C01 c01 = new C01();
         c01.good(3);
-        c01.bad(0);
+        c01.bad();
     }
 
     public void good(int x) {
@@ -29,15 +29,15 @@ public class C01 {
         }
     }
 
-    public void bad(int x) {
+    public void bad() {
         String source = "";
         int[] a = new int[2];
-        boolean cond = true;
+        boolean cond = false;
         try {
-            a[x] = a[0];
-            source = source();
+            a[3] = a[0];
         } catch (IndexOutOfBoundsException e) {
-            cond = false;
+            source = source();
+            cond = true;
         }
         if (cond) {
             sink(source);
