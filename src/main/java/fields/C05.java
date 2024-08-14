@@ -14,7 +14,7 @@ public class C05 {
 
     public void good() {
         boolean cond = randomBoolean();
-        String source = "safe";
+        String source = safe();
         if (!cond) {
             source = source();
         }

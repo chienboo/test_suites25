@@ -18,7 +18,7 @@ public class C02 {
         C b = new C();
         if (i > 0) {
             a.s = InfoLeak.source();
-            a.x = 0;
+            a.x = 1;
         }
         b.s = InfoLeak.safe();
         b.x = i;

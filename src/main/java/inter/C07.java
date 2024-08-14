@@ -10,6 +10,7 @@ public class C07 {
     public static void main(String[] args) {
         C07 c07 = new C07();
         c07.good();
+        c07.bad();
     }
 
     public int addOne(int x) {
