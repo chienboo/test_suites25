@@ -1,5 +1,6 @@
 package general.exception;
 
+import static defect.InfoLeak.safe;
 import static defect.InfoLeak.sink;
 import static defect.InfoLeak.source;
 
@@ -14,7 +15,7 @@ public class C01 {
     }
 
     public void good(int x) {
-        String source = "";
+        String source = safe();
         int[] a = new int[2];
         boolean cond = true;
         try {
