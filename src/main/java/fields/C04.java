@@ -12,11 +12,12 @@ public class C04 {
         c04.good();
         c04.bad();
     }
+    private Inner inner = new Inner();
 
     public void good() {
         String source = source();
         setCond();
-        if (Inner.cond) {
+        if (inner.cond) {
             sink(source);
         }
     }
@@ -24,20 +25,20 @@ public class C04 {
     public void bad() {
         String source = source();
         turnOn();
-        if (Inner.cond) {
+        if (inner.cond) {
             sink(source);
         }
     }
 
     public void setCond() {
-        Inner.cond = false;
+        inner.cond = false;
     }
 
     public void turnOn() {
-        Inner.cond = true;
+        inner.cond = true;
     }
 
     static class Inner {
-        static boolean cond;
+        boolean cond;
     }
 }
