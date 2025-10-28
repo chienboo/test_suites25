@@ -39,3 +39,11 @@ build/
 
 ### Infer
 infer-out
+
+### IFPC Output
+ifpcOutput/
+ifpc-class-tmp/
+statistics.json
+
+### Project Documents
+运行方案.md
