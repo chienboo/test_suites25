@@ -1,0 +1,34 @@
+{
+  "force-delete-results-dir": true,
+  "quandary-sources": [
+    {
+        "procedure": "defect.InfoLeak.source",
+        "kinds": ["pcbench"]
+    }
+  ],
+  "quandary-sinks": [
+    {
+        "procedure": "defect.InfoLeak.sink",
+        "kinds": ["pcbench"]
+    }
+  ],
+  "quandary-sanitizers": [
+    {
+      "procedure": "defect.InfoLeak.safe"
+    }
+  ],
+  "pulse-taint-sources": [
+    {
+        "class_names": ["defect.InfoLeak"],
+        "method_names": ["source"],
+        "kinds": ["Simple"]
+    }
+  ],
+  "pulse-taint-sinks": [
+    {
+        "class_names": ["defect.InfoLeak"],
+        "method_names": ["sink"],
+        "kinds": ["Simple"]
+    }
+  ]
+}
