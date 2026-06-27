@@ -18,6 +18,9 @@
     </filter>
   </defs>
 
+  <rect x="6" y="6" width="748" height="168" rx="32" fill="#F8FAFC"/>
+  <rect x="7" y="7" width="746" height="166" rx="31" stroke="#D8DEE9" stroke-width="2"/>
+
   <g filter="url(#shadow)">
     <rect x="24" y="22" width="128" height="128" rx="32" fill="url(#mark)"/>
     <path d="M52 101 C71 62 103 62 122 101" stroke="white" stroke-width="10" stroke-linecap="round"/>
