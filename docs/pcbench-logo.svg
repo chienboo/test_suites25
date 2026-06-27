@@ -1,0 +1,36 @@
+<svg width="760" height="180" viewBox="0 0 760 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">PCBench</title>
+  <desc id="desc">PCBench wordmark with an abstract path-feasibility icon.</desc>
+  <defs>
+    <linearGradient id="mark" x1="24" y1="24" x2="150" y2="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="shadow" x="8" y="10" width="156" height="156" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="8"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.10 0 0 0 0 0.18 0 0 0 0 0.32 0 0 0 0.16 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="24" y="22" width="128" height="128" rx="32" fill="url(#mark)"/>
+    <path d="M52 101 C71 62 103 62 122 101" stroke="white" stroke-width="10" stroke-linecap="round"/>
+    <path d="M52 101 C75 126 99 126 122 101" stroke="white" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round" stroke-dasharray="8 11"/>
+    <path d="M91 79 L113 101" stroke="#FDE68A" stroke-width="7" stroke-linecap="round"/>
+    <path d="M113 79 L91 101" stroke="#FDE68A" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="52" cy="101" r="11" fill="white"/>
+    <circle cx="122" cy="101" r="11" fill="white"/>
+    <circle cx="87" cy="68" r="8" fill="white" fill-opacity="0.9"/>
+  </g>
+
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="188" y="82" font-size="58" font-weight="800" letter-spacing="0" fill="#111827">PCBench</text>
+    <text x="191" y="118" font-size="22" font-weight="500" letter-spacing="0" fill="#64748B">A Java benchmark for refuting infeasible taint paths</text>
+  </g>
+</svg>
